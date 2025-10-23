@@ -1,0 +1,18 @@
+{
+  "inputs": {
+    "x1": {"type": "tsp", "a": -0.2, "m": 0.0, "b": 0.4, "p": 1.4},
+    "x2": {"type": "tsp", "a": -0.3, "m": 0.0, "b": 0.2, "p": 0.8},
+    "x3": {"type": "norm", "m": 1.0, "sigma": 0.01}
+  },
+  "subexpressions": [
+    "1. + math.pow(x1, 2)",
+    "2.2 + math.pow(0.5 + x2, 4/3)"
+  ],
+  "transform": "x3 + subexpressions[0] / subexpressions[1]",
+  "n_trials": 1e6,
+  "n_digs": 3,
+  "coverage_interval_type": "probabilistically_symmetric",
+  "coverage_probability": 0.95,
+  "add_histogram": true,
+  "n_histogram_bins": 100
+}
