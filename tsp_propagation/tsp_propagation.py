@@ -294,12 +294,11 @@ def main(input_file: str):
         log.error(f"error: {e}")
 
 
+#  if __name__ == "__main__":
+#     main("./example.json")   # debug
+
+
 if __name__ == "__main__":
-
-    main("./example.json")
-
-
-if __name__ == "__0main__":
 
     args = sys.argv
     if len(args) < 2:
